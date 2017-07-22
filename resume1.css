@@ -1,0 +1,228 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+ul,ol{
+    list-style:none;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight:normal;
+}
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    /*fill: currentColor;*/
+    fill:white;
+    overflow: hidden;
+}
+.layout{
+    max-width:820px;
+    margin:0 auto;
+}
+section.topbar-wrapper{
+    background-color: rgb(247,97,96);
+}
+section.topbar-wrapper>.layout>ul{
+    display:flex;
+}
+section.topbar-wrapper>.layout>ul>li{
+    margin-right:22px;
+    padding:10px 0;
+}
+section.navigation{
+    background-color: rgb(55,71,96);
+}
+section.navigation>.layout>ul{
+    display:flex;
+    justify-content:center;
+}
+section.navigation>.layout>ul>li{
+    padding:35px 20px 25px;
+}
+section.navigation>.layout>ul>li>a{
+    text-decoration: none;
+    color:white;
+    font-size:12px;
+}
+section.profile{
+    min-height:360px;
+    background:transparent url("https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-423771.jpg") no-repeat center;
+    background-size:cover;
+    position: relative;
+    display: flex;
+    justify-content:center;
+}
+section.profile::after{
+    content:"";
+    display:block;
+    position: absolute;
+    height:100%;
+    width:100%;
+    left:0;
+    top:0;
+    background-color: rgba(55,71,96,0.3);
+}
+section.profile>div{
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin-top:60px;
+    color:white;
+}
+section.profile>div>h2{
+    font-size:40px;
+    margin-bottom:20px;
+}
+section.profile>div>p>svg{
+    fill:red;
+}
+section.profile>div>p>span.jobtitle{
+    font-size:12px;
+}
+section.profile>div>p>span.locationtitle{
+    font-size:12px;
+    background-color: rgb(247,97,96);
+    padding:5px 10px;
+    border-radius:5px;
+    margin-left:20px;
+}
+section.best-project{
+    display:flex;
+    justify-content:center;
+    margin-top:-180px;
+    position: relative;
+    z-index: 1;
+}
+section.best-project>.card{
+    margin-left:10px;
+    margin-right:10px;
+    max-width:345px;
+}
+section.best-project>.card>.card-content{
+    text-align:center;
+    background-color: rgb(237,244,252);
+}
+section.best-project>.card>.card-content>h1{
+    padding-top:25px;
+    padding-bottom:25px;
+}
+section.best-project>.card>.card-content>ul{
+    display:flex;
+    margin:0 12px 0 20px;
+    flex-wrap: wrap;
+}
+section.best-project>.card>.card-content>ul>li{
+    padding:4px 8px;
+    background-color: rgb(148,163,184);
+    margin-right:8px;
+    margin-bottom:8px;
+    border-radius:6px;
+    color:white;
+    font-size:12px;
+}
+section.main-content>.tabs{
+    max-width:710px;
+    margin:30px auto 32px;
+    border:4px solid rgb(235,243,252);
+}
+section.main-content>.tabs>ul{
+    display:flex;
+}
+section.main-content>.tabs>ul>li{
+    width:33.3333%;
+    text-align: center;
+    padding:10px 40px;
+    cursor: pointer;
+}
+section.main-content>.tabs>ul>li.active{
+    background-color: rgb(237,244,252);
+}
+section.main-content>.tabs>ul>li>svg{
+    fill:red;
+}
+section.main-content>.page{
+     max-width:650px;
+     min-height:600px;
+     margin:0 auto;
+     display:none;
+ }
+section.main-content>.page.active{
+    display:block;
+}
+section.main-content>.page>ul{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+}
+section.main-content>.page>ul>li{
+    width:200px;
+    text-align: center;
+    margin-bottom:32px;
+}
+section.main-content>.page>ul>li>.img-wrapper{
+    position: relative;
+}
+section.main-content>.page>ul>li>.img-wrapper>img{
+    width:100%;
+}
+section.main-content>.page>ul>li>h2{
+    margin-top:5px;
+    font-size:14px;
+}
+section.main-content>.page>ul>li>.img-wrapper>p{
+    display:none;
+    position:absolute;
+    left:0;
+    top:0;
+    font-size:12px;
+    color:white;
+    width:100%;
+    height:100%;
+    background-color: rgba(237,244,252,0.5);
+    padding:5px 10px;
+}
+section.main-content>.page>ul>li>.img-wrapper>p.active{
+    display:block;
+}
+section.main-content>.skill{
+    background:transparent url(https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-296157.jpg) center no-repeat;
+    background-size:cover;
+    color:rgb(137,144,252);
+}
+section.main-content>.skill>ul{
+    padding-top:20px;
+    display:block;
+    overflow: hidden;
+}
+section.main-content>.skill>ul>li{
+    margin-left:50%;
+    transform:translateX(-50%);
+    animation:move 3s;
+}
+section.main-content>.skill>ul>li>h2{
+    font-size:24px;
+    text-align: left;
+    padding-bottom:10px;
+}
+section.main-content>.skill>ul>li>ul>li{
+    text-align:left;
+    font-size:12px;
+}
+.introduce ul li{
+    font-size:14px;
+    border-radius:10px;
+    background-color: rgb(137,244,252);
+    line-height:40px;
+    height:40px;
+}
+@keyframes move{
+    0%{
+        margin-left:0;
+        transform:translateX(-100%);
+    }
+    100%{
+        transform:translateX(-50%);
+    }
+}
